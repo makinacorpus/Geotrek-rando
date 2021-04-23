@@ -1,11 +1,10 @@
 'use strict';
 
-function stylesConfigService($http, $filter, settingsFactory, translationService) {
+function stylesConfigService($http, $filter, settingsFactory, translationService, globalSettings) {
 
     // Variable to test if Json file is available - for development
     // Set to false if API dosn't send this file.
-    this.isConfigAvailable = false;
-
+    this.isConfigAvailable = globalSettings.USE_CATEGORIES_COLORS_API;
     var defaultConfig = {
         "colors": {
             "main": "#f39400",
@@ -28,11 +27,11 @@ function stylesConfigService($http, $filter, settingsFactory, translationService
 
     this.getCustomConfig = function getCustomConfig() {
         var currentLang = translationService.getCurrentLang(),
-            url = settingsFactory.stylesConfigUrl.replace(/\$lang/, currentLang);
+            url = settingsFactory.parametersURL;
 
         return $http({url: url})
             .then(function (response) {
-                return response.data;
+                return angular.fromJson(response.data);
             }, function() {
                 return defaultConfig;
             });

@@ -177,5 +177,6 @@
         { "id": 40, "label": "40m"},
         { "id": 999, "label": ">40m"}
     ],
-    "ASIDE_PANEL_FOLDED_BY_DEFAULT": false
+    "ASIDE_PANEL_FOLDED_BY_DEFAULT": false,
+    "USE_CATEGORIES_COLORS_API": false
 }

@@ -209,7 +209,6 @@
                 line-height: 38px;
             }
             border-radius: 50%;
-            background-color: $default-category-color;
             position: relative;
 
             img, svg {
@@ -262,7 +261,6 @@
         margin: 0;
         padding: 0;
         width: 40px;
-        background-color: $default-category-color;
         @media (max-width: 540px) {
             width: 30px;
         }

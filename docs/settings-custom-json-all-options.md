@@ -230,6 +230,7 @@ WARNING_SUBMIT_URL | "reports/report" | Warning submit URL
 STYLES_CONFIG_FILE | "styles.json" | Custom styles variables
 APPROVED_BIG | "images/approved-big.png" | Default big image for approved label (for detail page)
 APPROVED_SMALL | "images/approved-small.png" | Default small image for approved label (for results page)
+PARAMETERS_FILE | "parameters.json" | Parameters rando
 
 ## Filters
 
